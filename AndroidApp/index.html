@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <!-- Div para el mensaje de error -->
+      <div id="error-message" style="color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; padding: 10px; margin-bottom: 20px; border-radius: 4px; display: none;"></div>
+      <form class="row g-3 needs-validation" novalidate action="login.php" method="post">
+        <div class="txt_field">
+          <input type="text" name="nickname" required />
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" name="password" required />
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass"></div>
+        <input type="submit" value="Login" />
+        <div class="signup_link"> <a href="https://droopystone36.org.uk/t8/dashboard/index.php"></a></div>
+      </form>
+    </div>
+    <script>
+      // Mostrar el mensaje de error si existe en la URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const errorMessage = urlParams.get('error');
+      if (errorMessage) {
+          const errorDiv = document.getElementById('error-message');
+          errorDiv.style.display = 'block';
+          errorDiv.textContent = decodeURIComponent(errorMessage);
+      }
+  </script>
+  
+    
+  </body>
+</html>

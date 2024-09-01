@@ -1,0 +1,183 @@
+[25-Jul-2024 06:02:09 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/droopyst/public_html/t6/dashboard/index.php on line 88
+[25-Jul-2024 06:02:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'full_name' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:150
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(150): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 150
+[25-Jul-2024 06:02:22 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/droopyst/public_html/t6/dashboard/index.php on line 88
+[25-Jul-2024 06:02:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'full_name' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:150
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(150): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 150
+[25-Jul-2024 06:02:26 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/droopyst/public_html/t6/dashboard/index.php on line 88
+[25-Jul-2024 06:02:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'full_name' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:150
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(150): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 150
+[25-Jul-2024 06:06:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'full_name' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:09:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'worker_id' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, firs...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:10:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'droopyst_test01.register' doesn't exist in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:11:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'droopyst_test01.register' doesn't exist in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:11:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'droopyst_test01.register' doesn't exist in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:11:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'droopyst_test01.register' doesn't exist in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:11:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'droopyst_test01.register' doesn't exist in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:12:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[25-Jul-2024 06:12:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:69
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(69): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 69
+[26-Jul-2024 05:49:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:50:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:50:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mobile_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:45
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(45): mysqli->query('SELECT loan_typ...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 45
+[26-Jul-2024 05:52:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:52:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:52:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:52:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:52:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:52:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:53:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:53:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:53:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:53:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:53:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73
+[26-Jul-2024 05:53:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in /home/droopyst/public_html/t6/dashboard/index.php:73
+Stack trace:
+#0 /home/droopyst/public_html/t6/dashboard/index.php(73): mysqli->query('SELECT id, full...')
+#1 {main}
+  thrown in /home/droopyst/public_html/t6/dashboard/index.php on line 73

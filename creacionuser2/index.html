@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <!----======== CSS ======== -->
+
+    <link rel="stylesheet" href="style.css">
+
+     
+
+    <!----===== Iconscout CSS ===== -->
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+
+    <title>Creación de Usuario </title> 
+
+</head>
+
+<body>
+    <div class="container">
+        <header>Registration</header>
+        <form action="insert.php" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Detalles Personales</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nombre Completo</label>
+                            <input type="text" name="full_name" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Fecha de Nacimiento</label>
+                            <input type="date" name="date_of_birth" placeholder="Ingrese su fecha de nacimiento" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Ingrese su email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Número de Teléfono</label>
+                            <input type="tel" name="mobile_number" placeholder="Ingrese su número de teléfono" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Género</label>
+                            <select name="gender" required>
+                                <option disabled selected>Seleccione su género</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="details ID">
+                    <span class="title">Detalles de Identidad</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Tipo de Identificación</label>
+                            <input type="number" name="id_type" placeholder="Ingrese el tipo de identificación (1, 2 o 3)" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Autoridad Emisora</label>
+                            <input type="text" name="issued_authority" placeholder="Ingrese la autoridad emisora" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Estado Emisor</label>
+                            <input type="text" name="issued_state" placeholder="Ingrese el estado emisor" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Fecha de Emisión</label>
+                            <input type="date" name="issued_date" placeholder="Ingrese la fecha de emisión" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Fecha de Expiración</label>
+                            <input type="date" name="expiry_date" placeholder="Ingrese la fecha de expiración" required>
+                        </div>
+                    </div>
+                    <button class="nextBtn">
+                        <span class="btnText">Siguiente</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Detalles de Dirección</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Tipo de Dirección</label>
+                            <input type="text" name="address_type" placeholder="Permanente o Temporal" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Nacionalidad</label>
+                            <input type="text" name="nationality" placeholder="Ingrese su nacionalidad" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Estado</label>
+                            <input type="text" name="state" placeholder="Ingrese su estado" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Distrito</label>
+                            <input type="text" name="district" placeholder="Ingrese su distrito" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Contraseña</label>
+                            <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="details family">
+                    <span class="title">Detalles Familiares</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nombre del Padre</label>
+                            <input type="text" name="father_name" placeholder="Ingrese el nombre del padre" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Nombre de la Madre</label>
+                            <input type="text" name="mother_name" placeholder="Ingrese el nombre de la madre" required>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Atrás</span>
+                        </div>
+                        <button type="submit" class="submit">
+                            <span class="btnText">Enviar</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+<script>
+    const form = document.querySelector("form"),
+        nextBtn = form.querySelector(".nextBtn"),
+        backBtn = form.querySelector(".backBtn"),
+        allInput = form.querySelectorAll(".first input");
+
+    nextBtn.addEventListener("click", () => {
+        allInput.forEach(input => {
+            if(input.value != ""){
+                form.classList.add('secActive');
+            } else {
+                form.classList.remove('secActive');
+            }
+        })
+    });
+
+    backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+</script>
+</html>

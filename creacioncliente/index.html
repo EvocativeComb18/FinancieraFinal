@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Formulario de Préstamo Individual</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>Formulario de Préstamo Individual</header>
+        <form action="insert.php" method="post">
+            <div class="form">
+                <div class="section">
+                    <h2>Hoja de Información del Cliente</h2>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Zona</label>
+                            <input type="text" name="zone" placeholder="Zona">
+                        </div>
+                        <div class="input-field">
+                            <label>Número de Cliente</label>
+                            <input type="text" name="client_number" placeholder="Número de Cliente">
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Datos del Préstamo</h2>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Tipo de Crédito</label>
+                            <input type="text" name="loan_type" placeholder="Tipo de Crédito">
+                        </div>
+                        <div class="input-field">
+                            <label>Monto Solicitado</label>
+                            <input type="number" name="requested_amount" placeholder="Monto Solicitado">
+                        </div>
+                        <div class="input-field">
+                            <label>Plazo</label>
+                            <input type="number" name="loan_term" placeholder="Plazo">
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Datos Personales del Solicitante</h2>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>RFC</label>
+                            <input type="text" name="rfc" placeholder="RFC">
+                        </div>
+                        <div class="input-field">
+                            <label>CURP</label>
+                            <input type="text" name="curp" placeholder="CURP">
+                        </div>
+                        <div class="input-field">
+                            <label>Nombre</label>
+                            <input type="text" name="first_name" placeholder="Nombre">
+                        </div>
+                        <div class="input-field">
+                            <label>Apellido Paterno</label>
+                            <input type="text" name="last_name" placeholder="Apellido Paterno">
+                        </div>
+                        <div class="input-field">
+                            <label>Apellido Materno</label>
+                            <input type="text" name="middle_name" placeholder="Apellido Materno">
+                        </div>
+                        <div class="input-field">
+                            <label>Fecha de Nacimiento</label>
+                            <input type="date" name="date_of_birth" placeholder="Fecha de Nacimiento">
+                        </div>
+                        <div class="input-field">
+                            <label>Estado Civil</label>
+                            <input type="text" name="marital_status" placeholder="Estado Civil">
+                        </div>
+                        <div class="input-field">
+                            <label>Sexo</label>
+                            <input type="text" name="gender" placeholder="Sexo">
+                        </div>
+                        <div class="input-field">
+                            <label>No. de dependientes económicos</label>
+                            <input type="number" name="num_dependents" placeholder="No. de dependientes económicos">
+                        </div>
+                        <div class="input-field">
+                            <label>Dirección</label>
+                            <input type="text" name="address_line" placeholder="Dirección">
+                        </div>
+                        <div class="input-field">
+                            <label>Colonia</label>
+                            <input type="text" name="neighborhood" placeholder="Colonia">
+                        </div>
+                        <div class="input-field">
+                            <label>Localidad</label>
+                            <input type="text" name="city" placeholder="Localidad">
+                        </div>
+                        <div class="input-field">
+                            <label>Estado</label>
+                            <input type="text" name="state" placeholder="Estado">
+                        </div>
+                        <div class="input-field">
+                            <label>Código Postal</label>
+                            <input type="text" name="postal_code" placeholder="Código Postal">
+                        </div>
+                        <div class="input-field">
+                            <label>Tipo de Identificación</label>
+                            <input type="text" name="id_type" placeholder="Tipo de Identificación">
+                        </div>
+                        <div class="input-field">
+                            <label>Número de Identificación</label>
+                            <input type="text" name="id_number" placeholder="Número de Identificación">
+                        </div>
+                        <div class="input-field">
+                            <label>Lugar de Nacimiento (Estado y País)</label>
+                            <input type="text" name="birth_place" placeholder="Lugar de Nacimiento">
+                        </div>
+                        <div class="input-field">
+                            <label>Nacionalidad</label>
+                            <input type="text" name="nationality" placeholder="Nacionalidad">
+                        </div>
+                        <div class="input-field">
+                            <label>La vivienda es</label>
+                            <input type="text" name="housing_type" placeholder="La vivienda es">
+                        </div>
+                        <div class="input-field">
+                            <label>Tiempo viviendo en dirección actual (Años)</label>
+                            <input type="number" name="time_at_address_years" placeholder="Años">
+                        </div>
+                        <div class="input-field">
+                            <label>Tiempo viviendo en dirección actual (Meses)</label>
+                            <input type="number" name="time_at_address_months" placeholder="Meses">
+                        </div>
+                        <div class="input-field">
+                            <label>Teléfono</label>
+                            <input type="text" name="phone_number" placeholder="Teléfono">
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Datos Familiares</h2>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nombre del Cónyuge</label>
+                            <input type="text" name="spouse_name" placeholder="Nombre del Cónyuge">
+                        </div>
+                        <div class="input-field">
+                            <label>Nombre del Hijo 1</label>
+                            <input type="text" name="child1_name" placeholder="Nombre del Hijo 1">
+                        </div>
+                        <div class="input-field">
+                            <label>Nombre del Hijo 2</label>
+                            <input type="text" name="child2_name" placeholder="Nombre del Hijo 2">
+                        </div>
+                        <div class="input-field">
+                            <label>Nombre del Hijo 3</label>
+                            <input type="text" name="child3_name" placeholder="Nombre del Hijo 3">
+                        </div>
+                        <div class="input-field">
+                            <label>Nombre del Hijo 4</label>
+                            <input type="text" name="child4_name" placeholder="Nombre del Hijo 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Fecha de Llenado</label>
+                            <input type="date" name="form_fill_date" placeholder="Fecha de Llenado">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit">
+                    <span class="btnText">Enviar</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+<script>
+    const form = document.querySelector("form"),
+        nextBtn = form.querySelector(".nextBtn"),
+        backBtn = form.querySelector(".backBtn"),
+        allInput = form.querySelectorAll(".first input");
+
+    nextBtn.addEventListener("click", () => {
+        allInput.forEach(input => {
+            if(input.value != ""){
+                form.classList.add('secActive');
+            } else {
+                form.classList.remove('secActive');
+            }
+        })
+    });
+
+    backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+</script>
+
+
+
+</html>
