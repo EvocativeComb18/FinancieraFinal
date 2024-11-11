@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagaré Normal</title>
+    <style>
+        /* Importar fuente y estilo general */
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #2980b9;
+            height: 100vh;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+            padding: 20px 40px;
+        }
+
+        .center h1 {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid silver;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            border: 1px solid #000;
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        .button_container {
+            text-align: center;
+        }
+
+        input[type="submit"], .role_button {
+            width: 100%;
+            height: 50px;
+            background: #2691d9;
+            border-radius: 25px;
+            font-size: 18px;
+            color: #e9f4fb;
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+            transition: 0.5s;
+            border: none;
+            margin-top: 15px;
+        }
+
+        input[type="submit"]:hover, .role_button:hover {
+            background: #1e7bbd;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Formulario de Pagaré Normal</h1>
+        <form action="insert_pagare.php" method="POST" enctype="multipart/form-data">
+            <label for="nombre_cliente">Nombre del Cliente:</label>
+            <input type="text" name="nombre_cliente" required><br><br>
+
+            <label for="monto">Monto:</label>
+            <input type="number" name="monto" step="0.01" required><br><br>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" required><br><br>
+
+            <h3>Firma del Cliente:</h3>
+            <canvas id="signatureCanvas"></canvas>
+            <input type="hidden" id="firma_cliente" name="firma_cliente">
+            <button type="button" onclick="clearCanvas()" class="role_button">Limpiar</button><br><br>
+
+            <input type="submit" value="Guardar Pagaré" class="role_button">
+        </form>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('signatureCanvas');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+
+        canvas.addEventListener('mousedown', () => drawing = true);
+        canvas.addEventListener('mouseup', () => drawing = false);
+        canvas.addEventListener('mousemove', draw);
+
+        function draw(event) {
+            if (!drawing) return;
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#000';
+            ctx.lineTo(event.offsetX, event.offsetY);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(event.offsetX, event.offsetY);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('firma_cliente').value = '';
+        }
+
+        document.querySelector('form').addEventListener('submit', () => {
+            const dataURL = canvas.toDataURL('image/webp');
+            document.getElementById('firma_cliente').value = dataURL;
+        });
+    </script>
+</body>
+</html>

@@ -169,16 +169,70 @@
                             <input type="date" name="form_fill_date" placeholder="Fecha de Llenado">
                         </div>
                     </div>
+                    <div class="section">
+                        <h2>Firma</h2>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Firma:</label>
+                                <canvas id="signatureCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+                                <br>
+                                <button type="button" id="clearSignature">Limpiar</button>
+                                <input type="hidden" name="signature" id="signatureData" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit">
+                        <span class="btnText">Enviar</span>
+                    </button>
                 </div>
-                <button type="submit" class="submit">
-                    <span class="btnText">Enviar</span>
-                </button>
+            </form>
+        </div>
+        
+        <script>
+            // Configuración del canvas para la firma
+            const canvas = document.getElementById('signatureCanvas');
+            const ctx = canvas.getContext('2d');
+            let drawing = false;
+        
+            canvas.addEventListener('mousedown', (e) => {
+                drawing = true;
+                ctx.beginPath();
+                ctx.moveTo(e.offsetX, e.offsetY);
+            });
+        
+            canvas.addEventListener('mousemove', (e) => {
+                if (!drawing) return;
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            });
+        
+            canvas.addEventListener('mouseup', () => {
+                drawing = false;
+            });
+        
+            // Limpiar firma
+            document.getElementById('clearSignature').addEventListener('click', () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                document.getElementById('signatureData').value = '';
+            });
+        
+            // Guardar firma en base64
+            document.querySelector('form').addEventListener('submit', () => {
+                const dataURL = canvas.toDataURL('image/webp');
+                document.getElementById('signatureData').value = dataURL;
+            });
+        </script>
+        
+                </div>
+                
             </div>
         </form>
     </div>
     <script src="script.js"></script>
 </body>
-
+<!---
 <script>
     const form = document.querySelector("form"),
         nextBtn = form.querySelector(".nextBtn"),
@@ -196,7 +250,7 @@
     });
 
     backBtn.addEventListener("click", () => form.classList.remove('secActive'));
-</script>
+</script>-->
 
 
 

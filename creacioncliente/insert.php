@@ -14,6 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Obtener datos del formulario
 $zone = $_POST['zone'];
 $client_number = $_POST['client_number'];
 $loan_type = $_POST['loan_type'];
@@ -48,13 +49,42 @@ $child3_name = $_POST['child3_name'];
 $child4_name = $_POST['child4_name'];
 $form_fill_date = $_POST['form_fill_date'];
 
-$sql = "INSERT INTO loan_information (zone, client_number, loan_type, requested_amount, loan_term, rfc, curp, first_name, last_name, middle_name, date_of_birth, marital_status, gender, num_dependents, address_line, neighborhood, city, state, postal_code, id_type, id_number, birth_place, nationality, housing_type, time_at_address_years, time_at_address_months, phone_number, spouse_name, child1_name, child2_name, child3_name, child4_name, form_fill_date) VALUES ('$zone', '$client_number', '$loan_type', '$requested_amount', '$loan_term', '$rfc', '$curp', '$first_name', '$last_name', '$middle_name', '$date_of_birth', '$marital_status', '$gender', '$num_dependents', '$address_line', '$neighborhood', '$city', '$state', '$postal_code', '$id_type', '$id_number', '$birth_place', '$nationality', '$housing_type', '$time_at_address_years', '$time_at_address_months', '$phone_number', '$spouse_name', '$child1_name', '$child2_name', '$child3_name', '$child4_name', '$form_fill_date')";
+// Obtener la firma en formato base64
+$signature = $_POST['signature'];
+if ($signature) {
+    $signatureData = str_replace('data:image/webp;base64,', '', $signature);
+    $signatureData = base64_decode($signatureData);
 
-if ($conn->query($sql) === TRUE) {
+    // Crear un nombre de archivo único y la ruta donde se guardará
+    $signatureFolder = 'path/to/signatures';
+    if (!file_exists($signatureFolder)) {
+        mkdir($signatureFolder, 0777, true); // Crear carpeta si no existe
+    }
+    $signatureFile = $signatureFolder . '/signature_' . time() . '.webp';
+
+    // Guardar la firma como archivo
+    file_put_contents($signatureFile, $signatureData);
+} else {
+    $signatureFile = null; // Si no hay firma
+}
+
+// Insertar datos en la base de datos
+$sql = "INSERT INTO loan_information (zone, client_number, loan_type, requested_amount, loan_term, rfc, curp, first_name, last_name, middle_name, date_of_birth, marital_status, gender, num_dependents, address_line, neighborhood, city, state, postal_code, id_type, id_number, birth_place, nationality, housing_type, time_at_address_years, time_at_address_months, phone_number, spouse_name, child1_name, child2_name, child3_name, child4_name, form_fill_date, signature) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ssssssssssssssssssssssssssssssss", $zone, $client_number, $loan_type, $requested_amount, $loan_term, $rfc, $curp, $first_name, $last_name, $middle_name, $date_of_birth, $marital_status, $gender, $num_dependents, $address_line, $neighborhood, $city, $state, $postal_code, $id_type, $id_number, $birth_place, $nationality, $housing_type, $time_at_address_years, $time_at_address_months, $phone_number, $spouse_name, $child1_name, $child2_name, $child3_name, $child4_name, $form_fill_date, $signatureFile);
+
+if ($stmt->execute()) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $stmt->error;
 }
+
+$stmt->close();
+$conn->close();
+?>
+
+
 
 $conn->close();
 ?>

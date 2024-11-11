@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
         $_SESSION['user'] = $user; // Guardar información del usuario en la sesión
-        header("Location: https://droopystone36.org.uk/t8/dashboard/index.php");
+        header("Location: https://droopystone36.org.uk/t8/AppMovil/index.html");
         exit();
     } else {
         // Redirigir de nuevo al formulario con un mensaje de error

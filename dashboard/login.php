@@ -27,12 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
         $_SESSION['user'] = $user; // Guardar información del usuario en la sesión
-        header("Location: https://droopystone36.org.uk/t6/dashboard/index.php");
+        header("Location: https://droopystone36.org.uk/final/dashboard/index.php");
         exit();
     } else {
         // Redirigir de nuevo al formulario con un mensaje de error
         $error = "Usuario o contraseña incorrectos";
-        header("Location: https://droopystone36.org.uk/test3/dashboard/pages-login.html?error=" . urlencode($error));
+        header("Location: https://droopystone36.org.uk/final/dashboard/pages-login.html?error=" . urlencode($error));
         exit();
     }
 
