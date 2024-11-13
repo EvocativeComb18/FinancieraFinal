@@ -55,15 +55,25 @@ $conn->close();
     <h2>Detalles de la Notificación</h2>
     <?php if ($notification): ?>
     <ul>
-        <li><strong>Tipo de Préstamo:</strong> <?php echo htmlspecialchars($notification['loan_type']); ?></li>
-        <li><strong>Cantidad Solicitada:</strong> <?php echo htmlspecialchars($notification['requested_amount']); ?></li>
-        <li><strong>Nombre del Cliente:</strong> <?php echo htmlspecialchars($notification['first_name'] . ' ' . $notification['last_name']); ?></li>
-        <li><strong>Fecha de Solicitud:</strong> <?php echo htmlspecialchars($notification['form_fill_date']); ?></li>
-        <li><strong>Dirección:</strong> <?php echo htmlspecialchars($notification['address_line'] . ', ' . $notification['neighborhood'] . ', ' . $notification['city'] . ', ' . $notification['state']); ?></li>
+        <li><strong>Tipo:</strong> <?php echo htmlspecialchars($notification['loan_type']); ?></li>
+        <li><strong>Cantidad:</strong> <?php echo htmlspecialchars($notification['requested_amount']); ?></li>
+        <li><strong>Nombre:</strong> <?php echo htmlspecialchars($notification['first_name'] . ' ' . $notification['last_name']); ?></li>
+        <li><strong>Fecha de solicitud:</strong> <?php echo htmlspecialchars($notification['form_fill_date']); ?></li>
+        <li><strong>Estado:</strong> <?php echo htmlspecialchars($notification['loan_status']); ?></li>
+        
+        <?php if ($notification['loan_status'] === 'No Aceptado'): ?>
+            <form method="post" action="accept_loan.php">
+                <input type="hidden" name="loan_id" value="<?php echo $notification['id']; ?>">
+                <button type="submit">Aceptar Préstamo</button>
+            </form>
+        <?php else: ?>
+            <p>Préstamo aceptado</p>
+        <?php endif; ?>
     </ul>
 <?php else: ?>
     <p>No se encontraron detalles para esta notificación.</p>
 <?php endif; ?>
+
 
     <a href="notifications.php" class="btn btn-secondary">Volver a todas las notificaciones</a>
 </div>
