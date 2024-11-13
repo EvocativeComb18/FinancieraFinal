@@ -1,14 +1,16 @@
-<?php
+<?
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$servername = "216.238.107.20";
+
+$servername = "195.250.27.28";
 $username = "droopyst_test";
 $password = "M3nd0z@2020.";
 $dbname = "droopyst_test01";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname, 3306);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -56,7 +58,7 @@ if ($signature) {
     $signatureData = base64_decode($signatureData);
 
     // Crear un nombre de archivo único y la ruta donde se guardará
-    $signatureFolder = 'path/to/signatures';
+    $signatureFolder = 'contratos/signatures';
     if (!file_exists($signatureFolder)) {
         mkdir($signatureFolder, 0777, true); // Crear carpeta si no existe
     }
@@ -85,7 +87,4 @@ $conn->close();
 ?>
 
 
-
-$conn->close();
-?>
 

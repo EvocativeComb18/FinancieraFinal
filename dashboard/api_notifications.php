@@ -1,11 +1,16 @@
 <?php
-$servername = "216.238.107.20";
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$servername = "195.250.27.28";
 $username = "droopyst_test";
 $password = "M3nd0z@2020.";
 $dbname = "droopyst_test01";
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Crear conexi車n
+$conn = new mysqli($servername, $username, $password, $dbname, 3306);
 
 // Verificar conexión
 if ($conn->connect_error) {

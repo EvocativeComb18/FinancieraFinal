@@ -374,7 +374,7 @@ $conn->close();
 
                     You have <span><?php echo count($notifications); ?></span> new notifications
 
-                    <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                    <a href="notifications.php"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
 
                 </li>
 
